@@ -15,8 +15,4 @@ public class Calculator {
     Consumer<Object> println = System.out::println;                   //Поменял тип переменной на Object, так как
                                                                       //в противном случаи не выполняется операция
                                                                       // isPositive, результатом которой является тип boolean
-
-
-
-
 }
