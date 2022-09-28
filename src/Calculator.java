@@ -1,4 +1,3 @@
-import javax.swing.text.StyledEditorKit;
 import java.util.function.*;
 
 public class Calculator {
@@ -6,7 +5,9 @@ public class Calculator {
     BinaryOperator<Integer> plus = (x, y) -> x + y;
     BinaryOperator<Integer> minus = (x, y) -> x - y;
     BinaryOperator<Integer> multiply= (x, y) -> x * y;
-    BinaryOperator<Integer> devide = (x, y) -> x / y;
+    BinaryOperator<Integer> devide = (x, y) -> {
+        return (y == 0) ? 0 : x / y;
+    };
     UnaryOperator<Integer> pow = x -> x * x;
     UnaryOperator<Integer> abs = x -> { return x > 0 ? x : x * -1;} ; //т.к тело метода состоит из нескольких операторов
                                                                       // то его необходимо заключить в {} и указать
